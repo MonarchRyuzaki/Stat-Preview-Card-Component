@@ -1,0 +1,145 @@
+:root{
+    --mainbackground : hsl(233, 47%, 7%);
+    --cardbackground : hsl(244, 38%, 16%);
+    --accent: hsl(277, 64%, 61%);
+    --mainheading: hsl(0, 0%, 100%);
+    --mainparagraph: hsla(0, 0%, 100%, 0.75);
+    --statheading: hsla(0, 0%, 100%, 0.6);  
+    --inter: 'Inter', sans-serif;
+    --lexadenca: 'Lexend Deca', sans-serif;
+}
+
+body{
+    font-size: 15px;
+    background-color: var(--mainbackground);
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.mainCard{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+    background-color: var(--cardbackground);
+    border-radius: 10px;
+}
+
+.write-up{
+    width: 45%;
+    margin-left: 85px;
+}
+
+
+img{
+    max-width: 100%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.stats{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+h2{
+    color: var(--mainheading);
+    font-family: var(--inter);
+    font-weight: 700;
+    font-size: 2.8rem;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+span{
+    color: var(--accent);
+
+}
+
+.card-body{
+    color: var(--mainparagraph);
+    font-family: var(--inter);
+    font-size: 15px;
+    margin-right: 150px;
+    margin-bottom: 60px;
+    line-height: 25px;
+}
+
+.stats{
+    margin-top: 50px;
+    margin-bottom: 80px;
+    margin-right: 150px;
+}
+
+.number{
+    font-size: 1.6rem;
+    font-family: var(--inter);
+    font-weight: 700;
+    color: var(--mainheading);
+    margin-bottom: 5px;
+}
+
+.target{
+    text-transform: uppercase;
+    font-family: var(--lexadenca);
+    color: var(--statheading);
+}
+
+@media (max-width: 1100px) {
+    .mainCard{
+        width: 700px;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    .number{
+        font-size: 1.1rem;
+    }
+    .target{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .mainCard{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .write-up{
+        margin-left: 0px;
+    }
+
+    .card-body{
+        margin-right: 0px;
+    }
+
+    .stats{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-right: 0px;
+    }
+
+    .target{
+        margin-bottom: 20px;
+    }
+
+    img{
+        max-width: 100%;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 0px;
+        border-top-left-radius: 10px;
+    }
+}
+
